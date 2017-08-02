@@ -1,0 +1,13 @@
+@{
+    Layout = "_Layout";
+}
+<h1>Places Where You've Been</h1>
+
+@foreach (var place in Model)
+{
+    <ul>
+        <li><h3><a href= "/place/@place.GetId()">@place.GetLocation()</a></h3></li>
+    </ul>
+}
+
+<p><a href="/form">Click here to fill out form for places you've been</a></p>
